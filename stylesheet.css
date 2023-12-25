@@ -60,3 +60,41 @@ body {
     opacity: 1;
   }
 }
+
+.reveal {
+  animation: reveal 1s both;
+}
+
+.reveal-long {
+  animation: reveal 2s both;
+}
+
+.on-reveal-delay {
+  animation: reveal 2s both 0.5s;
+}
+
+.normal-reveal {
+  animation: normalReveal linear both;
+  animation-timeline: view(block);
+  animation-range: contain -50% contain 70%;
+}
+
+@keyframes normalReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
